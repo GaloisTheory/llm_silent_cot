@@ -1,4 +1,6 @@
-# Unfaithful Chain-of-Thought: Can Models Reason with Injected CoT?
+# Models Don't Believe Their Own Reasoning (Unless It Sounds Reasoned)
+
+Full write up here: https://docs.google.com/document/d/1wXpQVpy-yVpsb4RN5dxxw8mIyPk5jCC8ICz5biNM0IQ/edit?tab=t.0#heading=h.riiejao24dhf
 
 This repository contains code for investigating whether LLMs can reason correctly with **unfaithful Chain-of-Thought (CoT)**. We intercept the model's thinking process and inject various content to test if models blindly follow stated conclusions or evaluate reasoning quality.
 
