@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment
+.env
+.venv/
+venv/
+.secrets
+
+# Cache
+.cache/
+*.cache
+
+# Model files (too large)
+*.pt
+*.bin
+*.safetensors
+*.gguf
+
+# Outputs and experiment results (large JSON files)
+**/outputs/
+*.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Cursor (keep rules, ignore debug logs)
+.cursor/debug.log
+
