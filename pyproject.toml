@@ -1,7 +1,8 @@
 [project]
 name = "llm-silent-cot"
 version = "0.1.0"
-description = "Investigating silent chain-of-thought in reasoning LLMs"
+description = "Investigating unfaithful chain-of-thought in reasoning LLMs"
+readme = "README.md"
 requires-python = ">=3.10,<3.13"
 
 dependencies = [
@@ -12,23 +13,32 @@ dependencies = [
     "datasets>=2.2.1",
     "einops>=0.8.0",
     
+    # Mechanistic Interpretability
+    "transformer-lens>=2.0.0",
+    
     # Analysis & Visualization
     "matplotlib>=3.8.0",
     "seaborn>=0.13.0",
     "pandas>=2.0.0",
-    "plotly>=5.24.0",
     
     # Utilities
     "tqdm",
     "pyyaml>=6.0",
-    "python-dotenv>=1.0.0",
-    
-    # Dev / Notebook
+]
+
+[project.optional-dependencies]
+dev = [
     "ipykernel",
     "jupyterlab",
     "pytest>=8.0.0",
 ]
 
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/bbq", "src/internals", "src/shared"]
+
 [tool.uv]
 package = false
-
